@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo Performing Arts & Academy | Music Lessons in Frisco, TX</title>
+    <title>Apollo Performing Arts & Academy | Premier Music Education in Frisco, TX</title>
     <style>
         /* ========== BASE STYLES ========== */
         :root {
-            --primary: #8B4513;
-            --secondary: #D4AF37;
-            --accent: #654321;
+            --primary: #2C3E50;
+            --secondary: #8B7355;
+            --accent: #C0B283;
             --light: #f8f9fa;
-            --dark: #333;
+            --dark: #1a1a1a;
             --text: #444;
+            --cream: #F4F4F4;
+            --gold: #D4AF37;
         }
         
         * {
@@ -41,6 +43,7 @@
         h1, h2, h3, h4 {
             color: var(--dark);
             margin-bottom: 1rem;
+            font-weight: 600;
         }
         
         h1 {
@@ -52,6 +55,18 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
         }
         
         h3 {
@@ -77,12 +92,12 @@
         }
         
         .btn-primary {
-            background: var(--secondary);
+            background: var(--accent);
             color: var(--dark);
         }
         
         .btn-primary:hover {
-            background: #c19b1c;
+            background: var(--gold);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -130,12 +145,12 @@
         }
         
         .btn-enrollment {
-            background: #9C27B0;
+            background: var(--secondary);
             color: white;
         }
         
         .btn-enrollment:hover {
-            background: #7b1fa2;
+            background: #6d5c47;
             transform: translateY(-3px);
         }
         
@@ -191,10 +206,26 @@
             color: var(--dark);
             font-weight: 500;
             transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
         }
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
         }
         
         .mobile-menu {
@@ -205,13 +236,25 @@
         
         /* ========== HERO SECTION STYLES ========== */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             padding: 150px 0 100px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="80">♫</text></svg>');
         }
         
         .hero-content h1 {
@@ -235,18 +278,35 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            gap: 2rem;
         }
         
         .hero-img {
             width: 100%;
             max-width: 500px;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .hero-img:hover {
+            transform: translateY(-5px);
+        }
+        
+        .img-pair {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+        
+        .img-pair .hero-img {
+            flex: 1;
         }
         
         /* ========== PROGRAMS SECTION STYLES ========== */
         .programs {
-            background: var(--light);
+            background: var(--cream);
         }
         
         .programs-grid {
@@ -257,21 +317,23 @@
         
         .program-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--accent);
         }
         
         .program-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
         
         .program-card i {
             font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
         }
         
         .program-card h3 {
@@ -292,20 +354,22 @@
         
         .pricing-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
             position: relative;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
         }
         
         .pricing-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .pricing-card.featured {
-            border: 3px solid var(--secondary);
+            border: 2px solid var(--accent);
             transform: scale(1.05);
         }
         
@@ -314,9 +378,9 @@
             top: -10px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--secondary);
+            background: var(--accent);
             color: var(--dark);
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 15px;
             font-weight: 600;
             font-size: 0.9rem;
@@ -351,14 +415,14 @@
         
         .pricing-card li:before {
             content: "✓";
-            color: var(--primary);
+            color: var(--accent);
             font-weight: bold;
             margin-right: 0.5rem;
         }
         
         /* ========== ABOUT SECTION STYLES ========== */
         .about {
-            background: var(--light);
+            background: var(--cream);
         }
         
         .about-content {
@@ -369,15 +433,15 @@
         }
         
         .about-image {
-            background: var(--primary);
             height: 400px;
-            border-radius: 15px;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             font-size: 5rem;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .about-img {
@@ -419,6 +483,7 @@
         /* ========== TALENT SHOW SECTION STYLES ========== */
         .talent-show {
             text-align: center;
+            background: var(--cream);
         }
         
         .talent-content {
@@ -436,19 +501,24 @@
         .highlight-card {
             background: white;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-5px);
         }
         
         .highlight-card i {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 1rem;
         }
         
         /* ========== CONTACT SECTION STYLES ========== */
         .contact {
-            background: var(--light);
+            background: white;
         }
         
         .contact-grid {
@@ -461,6 +531,11 @@
             text-align: left;
         }
         
+        .contact-info h2:after {
+            left: 0;
+            transform: none;
+        }
+        
         .contact-item {
             display: flex;
             align-items: flex-start;
@@ -470,7 +545,7 @@
         
         .contact-item i {
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-top: 0.25rem;
         }
         
@@ -517,7 +592,7 @@
         }
         
         .footer-section a:hover {
-            color: var(--secondary);
+            color: var(--accent);
         }
         
         .social-links {
@@ -533,8 +608,8 @@
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #ccc;
+            border-top: 1px solid #444;
+            color: #999;
         }
         
         /* ========== RESPONSIVE STYLES ========== */
@@ -592,6 +667,10 @@
                 width: 100%;
                 max-width: 300px;
             }
+            
+            .img-pair {
+                flex-direction: column;
+            }
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -603,7 +682,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <!-- Replace with your actual logo -->
-                    <div class="logo-img" style="background: var(--primary); color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 1.5rem;">
+                    <div class="logo-img" style="background: var(--primary); color: var(--accent); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 1.5rem; border: 2px solid var(--accent);">
                         A
                     </div>
                     <span>Apollo Performing Arts</span>
@@ -630,7 +709,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Unleash Your Musical Potential</h1>
-                <p>Professional music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
+                <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
                 <div class="hero-buttons">
                     <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Free Trial Lesson</a>
                     <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
@@ -638,11 +717,19 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Replace with your actual hero image -->
-                <div class="hero-img" style="background: linear-gradient(45deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                    <div style="text-align: center; padding: 2rem;">
-                        <i class="fas fa-music" style="font-size: 4rem; margin-bottom: 1rem;"></i>
-                        <p>Apollo Performing Arts Academy</p>
+                <div class="img-pair">
+                    <!-- Replace with your actual hero images -->
+                    <div class="hero-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        <div style="text-align: center; padding: 2rem;">
+                            <i class="fas fa-music" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Professional Music Instruction</p>
+                        </div>
+                    </div>
+                    <div class="hero-img" style="background: linear-gradient(45deg, var(--secondary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        <div style="text-align: center; padding: 2rem;">
+                            <i class="fas fa-trophy" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Performance Opportunities</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -663,7 +750,7 @@
                 </div>
                 <div class="about-image">
                     <!-- Replace with your actual about image -->
-                    <div class="about-img" style="background: linear-gradient(45deg, var(--accent), var(--primary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                    <div class="about-img" style="background: linear-gradient(45deg, var(--secondary), var(--primary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
                         <div style="text-align: center; padding: 2rem;">
                             <i class="fas fa-users" style="font-size: 4rem; margin-bottom: 1rem;"></i>
                             <p>Our Students in Action</p>
@@ -723,25 +810,25 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <!-- Replace with your actual image -->
-                    <div class="gallery-img" style="background: linear-gradient(45deg, #8B4513, #D4AF37); display: flex; align-items: center; justify-content: center; color: white;">
+                    <div class="gallery-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white;">
                         <i class="fas fa-guitar" style="font-size: 3rem;"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <!-- Replace with your actual image -->
-                    <div class="gallery-img" style="background: linear-gradient(45deg, #654321, #8B4513); display: flex; align-items: center; justify-content: center; color: white;">
+                    <div class="gallery-img" style="background: linear-gradient(45deg, var(--secondary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white;">
                         <i class="fas fa-drum" style="font-size: 3rem;"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <!-- Replace with your actual image -->
-                    <div class="gallery-img" style="background: linear-gradient(45deg, #D4AF37, #654321); display: flex; align-items: center; justify-content: center; color: white;">
+                    <div class="gallery-img" style="background: linear-gradient(45deg, var(--accent), var(--primary)); display: flex; align-items: center; justify-content: center; color: white;">
                         <i class="fas fa-microphone" style="font-size: 3rem;"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <!-- Replace with your actual image -->
-                    <div class="gallery-img" style="background: linear-gradient(45deg, #8B4513, #654321); display: flex; align-items: center; justify-content: center; color: white;">
+                    <div class="gallery-img" style="background: linear-gradient(45deg, var(--secondary), var(--primary)); display: flex; align-items: center; justify-content: center; color: white;">
                         <i class="fas fa-music" style="font-size: 3rem;"></i>
                     </div>
                 </div>
@@ -849,7 +936,7 @@
                 </div>
                 <div class="about-image">
                     <!-- Replace with your actual enrollment image -->
-                    <div class="about-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                    <div class="about-img" style="background: linear-gradient(45deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
                         <div style="text-align: center; padding: 2rem;">
                             <i class="fas fa-file-signature" style="font-size: 4rem; margin-bottom: 1rem;"></i>
                             <p>Join Our Music Family</p>
@@ -895,14 +982,6 @@
                             <p>Monday-Friday: 9AM-8PM<br>Saturday: 9AM-5PM<br>Sunday: By appointment only</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-buttons">
-                        <div class="button-group">
-                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Free Trial Lesson</a>
-                            <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
-                            <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact-info">
                     <h3>Quick Actions</h3>
@@ -923,7 +1002,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Apollo Performing Arts & Academy</h3>
-                    <p>Professional music education in Frisco, TX. Teaching students to perform confidently since 2010.</p>
+                    <p>Professional music education in Frisco, TX. Teaching students to perform confidently since 2017.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -950,7 +1029,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Apollo Performing Arts & Academy. All rights reserved.</p>
+                <p>&copy; 2025 Apollo Performing Arts & Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
