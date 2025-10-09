@@ -672,6 +672,25 @@
                 flex-direction: column;
             }
         }
+         /* ========== BUTTON CLICK FIX ========== */
+        .hero-buttons a {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .hero-buttons {
+            pointer-events: auto !important;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 100;
+        }
+    </style>
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -708,7 +727,7 @@
                 <h1>Unleash Your Musical Potential</h1>
                 <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
                 <div class="hero-buttons">
-                    <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Free Trial Lesson</a>
+                    <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
                     <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
                     <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
                 </div>
@@ -1073,6 +1092,7 @@
     </script>
 </body>
 </html>
+
 
 
 
