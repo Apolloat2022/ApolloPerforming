@@ -484,6 +484,46 @@
     height: 100%;
     object-fit: cover;
 }
+        /* ========== ENROLLMENT SECTION STYLES ========== */
+.enrollment {
+    background: var(--cream);
+    padding: 80px 0;
+}
+
+.enrollment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.enrollment-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 300px;
+}
+
+.enrollment-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Override the about-image styles for enrollment section */
+.enrollment .about-image {
+    height: auto !important;
+}
+
+.enrollment .about-img {
+    height: auto !important;
+    object-fit: contain !important;
+}
         /* ========== TALENT SHOW SECTION STYLES ========== */
         .talent-show {
             text-align: center;
@@ -1107,6 +1147,7 @@
     </script>
 </body>
 </html>
+
 
 
 
