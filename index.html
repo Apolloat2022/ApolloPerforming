@@ -672,25 +672,35 @@
                 flex-direction: column;
             }
         }
-         /* ========== BUTTON CLICK FIX ========== */
-        .hero-buttons a {
-            pointer-events: auto !important;
-            cursor: pointer !important;
-            position: relative;
-            z-index: 1000;
-        }
+       /* ========== BUTTON CLICK FIX ========== */
+.hero-buttons a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative;
+    z-index: 1000;
+}
 
-        .hero-buttons {
-            pointer-events: auto !important;
-            position: relative;
-            z-index: 1000;
-        }
+.hero-buttons {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1000;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 100;
-        }
-    </style>
+.hero-content {
+    position: relative;
+    z-index: 100;
+}
+
+/* FIX: Make sure the hero background doesn't block clicks */
+.hero:before {
+    pointer-events: none !important;
+}
+
+/* FIX: Ensure buttons are properly positioned */
+.btn {
+    position: relative;
+    z-index: 1000;
+}
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -1092,6 +1102,7 @@
     </script>
 </body>
 </html>
+
 
 
 
