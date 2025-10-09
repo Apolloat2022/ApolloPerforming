@@ -496,7 +496,7 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     width: 100%;
-    aspect-ratio: 1 / 1; /* Makes it square */
+    height: 400px; /* Fixed height like gallery */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -506,11 +506,11 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* Style the image to fit the square container */
+/* Style the image to fit the container like gallery */
 .enrollment .about-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fills the square container */
+    object-fit: contain; /* Changed from cover to contain - this prevents zooming */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -1142,6 +1142,7 @@
     </script>
 </body>
 </html>
+
 
 
 
