@@ -234,6 +234,16 @@
             cursor: pointer;
         }
         
+        /* ========== PAGE CONTAINER ========== */
+        .page-container {
+            display: none;
+            padding-top: 80px;
+        }
+        
+        .page-container.active {
+            display: block;
+        }
+        
         /* ========== HERO SECTION STYLES ========== */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -452,73 +462,75 @@
         
         /* ========== GALLERY SECTION STYLES ========== */
         .gallery {
-    padding: 80px 0;
-    background: white;
-}
+            padding: 80px 0;
+            background: white;
+        }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
 
-.gallery-item {
-    border-radius: 10px;
-    overflow: hidden;
-    height: 300px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-}
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
 
-.gallery-img {
-    width: 100%;
-    height: 100%;
-}
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+        }
 
-.gallery-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         /* ========== ENROLLMENT SECTION STYLES ========== */
-.enrollment {
-    background: var(--cream);
-    padding: 80px 0;
-}
+        .enrollment {
+            background: var(--cream);
+            padding: 80px 0;
+        }
 
-/* Style the image container in enrollment section to be square */
-.enrollment .about-image {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 100%;
-    height: 400px; /* Fixed height like gallery */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        /* Style the image container in enrollment section to be square */
+        .enrollment .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 400px; /* Fixed height like gallery */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Add hover effect to the image container */
-.enrollment .about-image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
+        /* Add hover effect to the image container */
+        .enrollment .about-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
 
-/* Style the image to fill the container */
-.enrollment .about-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Changed back to cover to fill the container */
-    display: block;
-    transition: transform 0.3s ease;
-}
+        /* Style the image to fill the container */
+        .enrollment .about-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Changed back to cover to fill the container */
+            display: block;
+            transition: transform 0.3s ease;
+        }
 
-/* Optional: Add a slight scale effect on image hover */
-.enrollment .about-image:hover .about-img {
-    transform: scale(1.05);
-}
+        /* Optional: Add a slight scale effect on image hover */
+        .enrollment .about-image:hover .about-img {
+            transform: scale(1.05);
+        }
+        
         /* ========== TALENT SHOW SECTION STYLES ========== */
         .talent-show {
             text-align: center;
@@ -556,109 +568,132 @@
         }
         
         /* ========== CONTACT SECTION STYLES ========== */
-     .contact {
-    background: white;
-}
+        .contact {
+            background: white;
+        }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
 
-.contact-info h2 {
-    text-align: left;
-}
+        .contact-info h2 {
+            text-align: left;
+        }
 
-.contact-info h2:after {
-    left: 0;
-    transform: none;
-}
+        .contact-info h2:after {
+            left: 0;
+            transform: none;
+        }
 
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
 
-.contact-item i {
-    font-size: 1.5rem;
-    color: var(--secondary);
-    margin-top: 0.25rem;
-}
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-top: 0.25rem;
+        }
 
-.contact-item h4 {
-    margin-bottom: 0.5rem;
-}
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+        }
 
-.contact-buttons {
-    margin-top: 2rem;
-}
+        .contact-buttons {
+            margin-top: 2rem;
+        }
 
-/* Add this line to fix bold text */
-.contact-item p {
-    font-weight: normal;
-}
+        /* Add this line to fix bold text */
+        .contact-item p {
+            font-weight: normal;
+        }
+        
         /* ========== FOOTER STYLES ========== */
         footer {
-    background: #000000;
-    color: white;
-    padding: 3rem 0 1rem;
-}
+            background: #000000;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
 
-.footer-section h3,
-.footer-section h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
+        .footer-section h3,
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
 
-.footer-section ul {
-    list-style: none;
-}
+        .footer-section ul {
+            list-style: none;
+        }
 
-.footer-section li {
-    margin-bottom: 0.5rem;
-}
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
 
-.footer-section a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-.footer-section a:hover {
-    color: var(--accent);
-}
+        .footer-section a:hover {
+            color: var(--accent);
+        }
 
-.footer-section p {
-    color: white;
-}
+        .footer-section p {
+            color: white;
+        }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-.social-links a {
-    font-size: 1.5rem;
-    color: white;
-}
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+        }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #444;
-    color: white;
-}
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: white;
+        }
+        
+        /* ========== PAGE INDICATORS ========== */
+        .page-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .page-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .page-indicator.active {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
         
         /* ========== RESPONSIVE STYLES ========== */
         @media (max-width: 768px) {
@@ -719,363 +754,477 @@
             .img-pair {
                 flex-direction: column;
             }
+            
+            .page-indicators {
+                display: none;
+            }
         }
-       /* ========== BUTTON CLICK FIX ========== */
-.hero-buttons a {
-    pointer-events: auto !important;
-    cursor: pointer !important;
-    position: relative;
-    z-index: 1000;
-}
+        
+        /* ========== BUTTON CLICK FIX ========== */
+        .hero-buttons a {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            position: relative;
+            z-index: 1000;
+        }
 
-.hero-buttons {
-    pointer-events: auto !important;
-    position: relative;
-    z-index: 1000;
-}
+        .hero-buttons {
+            pointer-events: auto !important;
+            position: relative;
+            z-index: 1000;
+        }
 
-.hero-content {
-    position: relative;
-    z-index: 100;
-}
+        .hero-content {
+            position: relative;
+            z-index: 100;
+        }
 
-/* FIX: Make sure the hero background doesn't block clicks */
-.hero:before {
-    pointer-events: none !important;
-}
+        /* FIX: Make sure the hero background doesn't block clicks */
+        .hero:before {
+            pointer-events: none !important;
+        }
 
-/* FIX: Ensure buttons are properly positioned */
-.btn {
-    position: relative;
-    z-index: 1000;
-}
+        /* FIX: Ensure buttons are properly positioned */
+        .btn {
+            position: relative;
+            z-index: 1000;
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- ========== HEADER & NAVIGATION ========== -->
-   <header>
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="Logo.png" alt="Apollo Performing Arts" class="logo-img">
-                <span>Apollo Performing Arts</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#talent-show">Talent Show</a></li>
-                <li><a href="#enrollment">Enrollment</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </div>
-</header>
-
-    <!-- ========== HOME SECTION ========== -->
-    <section id="home" class="hero">
+    <header>
         <div class="container">
-            <div class="hero-content">
-                <h1>Unleash Your Musical Potential</h1>
-                <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
-                <div class="hero-buttons">
-                    <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                    <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
-                    <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="Logo.png" alt="Apollo Performing Arts" class="logo-img">
+                    <span>Apollo Performing Arts</span>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="img-pair">
-                    <!-- Replace with your actual hero images -->
-                    <div class="hero-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
-                        <div style="text-align: center; padding: 2rem;">
-                            <i class="fas fa-music" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <p>Professional Music Instruction</p>
-                        </div>
-                    </div>
-                    <div class="hero-img" style="background: linear-gradient(45deg, var(--secondary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
-                        <div style="text-align: center; padding: 2rem;">
-                            <i class="fas fa-trophy" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <p>Performance Opportunities</p>
-                        </div>
-                    </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                    <li><a href="#" class="nav-link" data-page="programs">Programs</a></li>
+                    <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="#" class="nav-link" data-page="pricing">Pricing</a></li>
+                    <li><a href="#" class="nav-link" data-page="talent">Talent Show</a></li>
+                    <li><a href="#" class="nav-link" data-page="enrollment">Enrollment</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
-            </div>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- ========== ABOUT US SECTION ========== -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Apollo Performing Arts</h2>
-            <div class="about-content">
-                <div>
-                    <h3>Our Mission</h3>
-                    <p>At Apollo Performing Arts & Academy, we're dedicated to teaching students to perform confidently, whether for personal enjoyment, family, friends, or public audiences.</p>
-                    <p>Our program typically spans 3-5 years, depending on the student's age and experience. We offer both Regular Lessons and Advanced Lessons, with opportunities to join our Performing Teams when students are ready.</p>
-                    <p>Located in Frisco, TX, our academy provides a comprehensive learning environment with supportive instructors who guide students through their musical journey.</p>
-                    <a href="#contact" class="btn btn-outline">Visit Our Academy</a>
-                </div>
-             <div class="about-image">
-    <img src="Studentsaction.jpg" alt="Our Students in Action" class="about-img">
-</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PROGRAMS SECTION ========== -->
-    <section id="programs" class="programs">
-        <div class="container">
-            <h2>Our Music Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <i class="fas fa-piano"></i>
-                    <h3>Regular Lessons</h3>
-                    <p>Perfect for students beginning their musical journey or continuing their education.</p>
-                    <ul>
-                        <li>4 half-hour lessons per month</li>
-                        <li>Private or group lessons available</li>
-                        <li>Performance opportunities</li>
-                        <li>All ages and skill levels</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <i class="fas fa-star"></i>
-                    <h3>Advanced Lessons</h3>
-                    <p>For dedicated students ready to take their skills to the next level.</p>
-                    <ul>
-                        <li>3 hours per week (12 hours monthly)</li>
-                        <li>Includes Performing Team participation</li>
-                        <li>Enhanced curriculum</li>
-                        <li>Additional performance opportunities</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Performing Teams</h3>
-                    <p>Join our Apollo Rockstar Kids for exceptional performance experiences.</p>
-                    <ul>
-                        <li>Minimum 2 hours of weekly classes</li>
-                        <li>Performance commitment required</li>
-                        <li>Team uniforms and gear</li>
-                        <li>Audition-based entry</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== GALLERY SECTION ========== -->
-    <section id="gallery" class="gallery">
-    <div class="container">
-        <h2>Our Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <div class="gallery-img">
-                    <img src="Abhinav.jpg" alt="Abhinav">
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-img">
-                    <img src="Mrpandey.jpg" alt="Mr. Pandey">
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-img">
-                    <img src="Monil.jpg" alt="Monil">
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-img">
-                    <img src="Zoya.jpg" alt="Zoya">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- ========== PRICING SECTION ========== -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2>Tuition & Packages</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Regular Lessons</h3>
-                    <div class="price">$300<span>/month</span></div>
-                    <ul>
-                        <li>30 minutes per week</li>
-                        <li>4 lessons monthly</li>
-                        <li>Personalized curriculum</li>
-                        <li>Performance opportunities</li>
-                    </ul>
-                    <a href="#enrollment" class="btn btn-outline">Enroll Now</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Extended Lessons</h3>
-                    <div class="price">$350-450<span>/month</span></div>
-                    <ul>
-                        <li>45 min - 1 hour per week</li>
-                        <li>4 lessons monthly</li>
-                        <li>Enhanced instruction</li>
-                        <li>All regular benefits</li>
-                    </ul>
-                    <a href="#enrollment" class="btn btn-primary">Enroll Now</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Advanced Program</h3>
-                    <div class="price">$700<span>/month</span></div>
-                    <ul>
-                        <li>3 hours per week</li>
-                        <li>Performing Team included</li>
-                        <li>Comprehensive training</li>
-                        <li>Multiple performance events</li>
-                    </ul>
-                    <a href="#enrollment" class="btn btn-outline">Enroll Now</a>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem;"><strong>Registration Fee:</strong> $75 | <strong>Trial Lesson:</strong> $35 (15-30 minutes)</p>
-        </div>
-    </section>
-
-    <!-- ========== TALENT SHOW SECTION ========== -->
-    <section id="talent-show" class="talent-show">
-        <div class="container">
-            <h2>Apollo Talent Shows</h2>
-            <div class="talent-content">
-                <p>We believe performance is an essential part of musical education. All Apollo students are encouraged to participate in our biannual talent shows and award ceremonies.</p>
-                <p>These events provide valuable stage experience and help build confidence in our students. Performing Team members have additional opportunities to showcase their skills throughout the year.</p>
-                
-                <div class="talent-highlights">
-                    <div class="highlight-card">
-                        <i class="fas fa-trophy"></i>
-                        <h3>Twice Yearly</h3>
-                        <p>We host talent shows twice each year with award ceremonies to celebrate student achievements.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-users"></i>
-                        <h3>All Students Welcome</h3>
-                        <p>Both regular and advanced students are encouraged to participate and showcase their progress.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-tshirt"></i>
-                        <h3>Apollo Attire</h3>
-                        <p>Students perform in official Apollo T-shirts and necessary accessories for a unified look.</p>
-                    </div>
-                </div>
-                
-                <p style="margin-top: 2rem;"><strong>Event Fee:</strong> $75 per talent show (non-refundable)</p>
-            </div>
-        </div> 
-<div style="text-align: center; margin-top: 2rem;">
-    <a href="https://www.facebook.com/ApolloPerformingArtsandAcademy/photos" 
-       class="btn btn-primary" 
-       target="_blank" 
-       style="background: #1877F2; border-color: #1877F2;">
-        <i class="fab fa-facebook" style="margin-right: 8px;"></i>
-        View Talent Show Pictures
-    </a>
-</div>
-        <div style="text-align: center; margin-top: 2rem;">
-    <a href="https://www.instagram.com/apollo.performingarts/" 
-       class="btn btn-primary" 
-       target="_blank"
-       style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); border: none;">
-        <i class="fab fa-instagram" style="margin-right: 8px;"></i>
-        Follow on Instagram
-    </a>
-</div>
-    </section>
-
-    <!-- ========== ENROLLMENT SECTION ========== -->
-    <section id="enrollment" class="enrollment">
-        <div class="container">
-            <h2>Begin Your Musical Journey</h2>
-            <div class="about-content">
-                <div>
-                    <h3>Enrollment Process</h3>
-                    <p>Getting started at Apollo Performing Arts is simple:</p>
-                    <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-                        <li><strong>Trial Lesson:</strong> Schedule a 15-30 minute introductory session ($35)</li>
-                        <li><strong>Assessment:</strong> We'll evaluate the student's level and goals</li>
-                        <li><strong>Program Selection:</strong> Choose the right program for your needs</li>
-                        <li><strong>Registration:</strong> Complete enrollment with $75 registration fee</li>
-                        <li><strong>Payment:</strong> Submit first and last month's tuition 48 hours before first lesson</li>
-                    </ol>
-                    <p>For questions about enrollment, contact us at <strong>Robinpandey@apollotunes.com</strong> or call <strong>833-918-0668</p>
-                    
-                    <div class="button-group">
-                        <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
-                        <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                        <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
-                    </div>
-                </div>
-                <div class="about-image">
-    <img src="Musicfamily.png" alt="Join Our Music Family" class="about-img">
-</div>
-</div>
-                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT SECTION ========== -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Visit Our Academy</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>7511 Main Street, Suite 200<br>Frisco, TX 75034<br>(Visit by appt. only)</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>833-813-0668 (Main)<br>469-616-1950 (Direct (Not always available) - No calls after 9 PM)</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>Robinpandey@apollotunes.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Office Hours</h4>
-                            <p>Monday-Friday: 9AM-8PM <br>Saturday: 9AM-5PM<br>Sunday: Closed<br>Office visits with appointment only </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <h3>Quick Actions</h3>
-                    <div class="button-group" style="flex-direction: column;">
+    <!-- ========== HOME PAGE ========== -->
+    <div id="home" class="page-container active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unleash Your Musical Potential</h1>
+                    <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
+                    <div class="hero-buttons">
                         <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
                         <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
                         <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
-                        <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="img-pair">
+                        <!-- Replace with your actual hero images -->
+                        <div class="hero-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                            <div style="text-align: center; padding: 2rem;">
+                                <i class="fas fa-music" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Professional Music Instruction</p>
+                            </div>
+                        </div>
+                        <div class="hero-img" style="background: linear-gradient(45deg, var(--secondary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                            <div style="text-align: center; padding: 2rem;">
+                                <i class="fas fa-trophy" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Performance Opportunities</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator active" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
         </div>
-    </section>
+    </div>
+
+    <!-- ========== ABOUT PAGE ========== -->
+    <div id="about" class="page-container">
+        <section class="about">
+            <div class="container">
+                <h2>About Apollo Performing Arts</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Our Mission</h3>
+                        <p>At Apollo Performing Arts & Academy, we're dedicated to teaching students to perform confidently, whether for personal enjoyment, family, friends, or public audiences.</p>
+                        <p>Our program typically spans 3-5 years, depending on the student's age and experience. We offer both Regular Lessons and Advanced Lessons, with opportunities to join our Performing Teams when students are ready.</p>
+                        <p>Located in Frisco, TX, our academy provides a comprehensive learning environment with supportive instructors who guide students through their musical journey.</p>
+                        <a href="#" class="btn btn-outline nav-link" data-page="contact">Visit Our Academy</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="Studentsaction.jpg" alt="Our Students in Action" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator active" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== PROGRAMS PAGE ========== -->
+    <div id="programs" class="page-container">
+        <section class="programs">
+            <div class="container">
+                <h2>Our Music Programs</h2>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <i class="fas fa-piano"></i>
+                        <h3>Regular Lessons</h3>
+                        <p>Perfect for students beginning their musical journey or continuing their education.</p>
+                        <ul>
+                            <li>4 half-hour lessons per month</li>
+                            <li>Private or group lessons available</li>
+                            <li>Performance opportunities</li>
+                            <li>All ages and skill levels</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Advanced Lessons</h3>
+                        <p>For dedicated students ready to take their skills to the next level.</p>
+                        <ul>
+                            <li>3 hours per week (12 hours monthly)</li>
+                            <li>Includes Performing Team participation</li>
+                            <li>Enhanced curriculum</li>
+                            <li>Additional performance opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Performing Teams</h3>
+                        <p>Join our Apollo Rockstar Kids for exceptional performance experiences.</p>
+                        <ul>
+                            <li>Minimum 2 hours of weekly classes</li>
+                            <li>Performance commitment required</li>
+                            <li>Team uniforms and gear</li>
+                            <li>Audition-based entry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator active" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== GALLERY PAGE ========== -->
+    <div id="gallery" class="page-container">
+        <section class="gallery">
+            <div class="container">
+                <h2>Our Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Abhinav.jpg" alt="Abhinav">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Mrpandey.jpg" alt="Mr. Pandey">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Monil.jpg" alt="Monil">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Zoya.jpg" alt="Zoya">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Studentsaction.jpg" alt="Students in Action">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="Musicfamily.png" alt="Music Family">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator active" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== PRICING PAGE ========== -->
+    <div id="pricing" class="page-container">
+        <section class="pricing">
+            <div class="container">
+                <h2>Tuition & Packages</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Regular Lessons</h3>
+                        <div class="price">$300<span>/month</span></div>
+                        <ul>
+                            <li>30 minutes per week</li>
+                            <li>4 lessons monthly</li>
+                            <li>Personalized curriculum</li>
+                            <li>Performance opportunities</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline nav-link" data-page="enrollment">Enroll Now</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Extended Lessons</h3>
+                        <div class="price">$350-450<span>/month</span></div>
+                        <ul>
+                            <li>45 min - 1 hour per week</li>
+                            <li>4 lessons monthly</li>
+                            <li>Enhanced instruction</li>
+                            <li>All regular benefits</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary nav-link" data-page="enrollment">Enroll Now</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Advanced Program</h3>
+                        <div class="price">$700<span>/month</span></div>
+                        <ul>
+                            <li>3 hours per week</li>
+                            <li>Performing Team included</li>
+                            <li>Comprehensive training</li>
+                            <li>Multiple performance events</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline nav-link" data-page="enrollment">Enroll Now</a>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem;"><strong>Registration Fee:</strong> $75 | <strong>Trial Lesson:</strong> $35 (15-30 minutes)</p>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator active" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== TALENT SHOW PAGE ========== -->
+    <div id="talent" class="page-container">
+        <section class="talent-show">
+            <div class="container">
+                <h2>Apollo Talent Shows</h2>
+                <div class="talent-content">
+                    <p>We believe performance is an essential part of musical education. All Apollo students are encouraged to participate in our biannual talent shows and award ceremonies.</p>
+                    <p>These events provide valuable stage experience and help build confidence in our students. Performing Team members have additional opportunities to showcase their skills throughout the year.</p>
+                    
+                    <div class="talent-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Twice Yearly</h3>
+                            <p>We host talent shows twice each year with award ceremonies to celebrate student achievements.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-users"></i>
+                            <h3>All Students Welcome</h3>
+                            <p>Both regular and advanced students are encouraged to participate and showcase their progress.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-tshirt"></i>
+                            <h3>Apollo Attire</h3>
+                            <p>Students perform in official Apollo T-shirts and necessary accessories for a unified look.</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 2rem;"><strong>Event Fee:</strong> $75 per talent show (non-refundable)</p>
+                </div>
+            </div> 
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.facebook.com/ApolloPerformingArtsandAcademy/photos" 
+                   class="btn btn-primary" 
+                   target="_blank" 
+                   style="background: #1877F2; border-color: #1877F2;">
+                    <i class="fab fa-facebook" style="margin-right: 8px;"></i>
+                    View Talent Show Pictures
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.instagram.com/apollo.performingarts/" 
+                   class="btn btn-primary" 
+                   target="_blank"
+                   style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); border: none;">
+                    <i class="fab fa-instagram" style="margin-right: 8px;"></i>
+                    Follow on Instagram
+                </a>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator active" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== ENROLLMENT PAGE ========== -->
+    <div id="enrollment" class="page-container">
+        <section class="enrollment">
+            <div class="container">
+                <h2>Begin Your Musical Journey</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Enrollment Process</h3>
+                        <p>Getting started at Apollo Performing Arts is simple:</p>
+                        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li><strong>Trial Lesson:</strong> Schedule a 15-30 minute introductory session ($35)</li>
+                            <li><strong>Assessment:</strong> We'll evaluate the student's level and goals</li>
+                            <li><strong>Program Selection:</strong> Choose the right program for your needs</li>
+                            <li><strong>Registration:</strong> Complete enrollment with $75 registration fee</li>
+                            <li><strong>Payment:</strong> Submit first and last month's tuition 48 hours before first lesson</li>
+                        </ol>
+                        <p>For questions about enrollment, contact us at <strong>Robinpandey@apollotunes.com</strong> or call <strong>833-918-0668</p>
+                        
+                        <div class="button-group">
+                            <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
+                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
+                            <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="Musicfamily.png" alt="Join Our Music Family" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator active" data-page="enrollment"></div>
+            <div class="page-indicator" data-page="contact"></div>
+        </div>
+    </div>
+
+    <!-- ========== CONTACT PAGE ========== -->
+    <div id="contact" class="page-container">
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Visit Our Academy</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>7511 Main Street, Suite 200<br>Frisco, TX 75034<br>(Visit by appt. only)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>833-813-0668 (Main)<br>469-616-1950 (Direct (Not always available) - No calls after 9 PM)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>Robinpandey@apollotunes.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday-Friday: 9AM-8PM <br>Saturday: 9AM-5PM<br>Sunday: Closed<br>Office visits with appointment only </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Quick Actions</h3>
+                        <div class="button-group" style="flex-direction: column;">
+                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
+                            <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
+                            <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
+                            <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-indicators">
+            <div class="page-indicator" data-page="home"></div>
+            <div class="page-indicator" data-page="about"></div>
+            <div class="page-indicator" data-page="programs"></div>
+            <div class="page-indicator" data-page="gallery"></div>
+            <div class="page-indicator" data-page="pricing"></div>
+            <div class="page-indicator" data-page="talent"></div>
+            <div class="page-indicator" data-page="enrollment"></div>
+            <div class="page-indicator active" data-page="contact"></div>
+        </div>
+    </div>
 
     <!-- ========== FOOTER ========== -->
     <footer>
@@ -1093,18 +1242,18 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                        <li><a href="#" class="nav-link" data-page="programs">Programs</a></li>
+                        <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#talent-show">Talent Shows</a></li>
-                        <li><a href="#enrollment">Enrollment</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" class="nav-link" data-page="talent">Talent Shows</a></li>
+                        <li><a href="#" class="nav-link" data-page="enrollment">Enrollment</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
                         <li><a href="#">Student Portal</a></li>
                     </ul>
                 </div>
@@ -1116,63 +1265,65 @@
     </footer>
 
     <script>
-        // ========== JAVASCRIPT CODE ==========
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        // ========== JAVASCRIPT CODE ========== 
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation handling
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContainers = document.querySelectorAll('.page-container');
+            const pageIndicators = document.querySelectorAll('.page-indicator');
+            
+            // Function to show a specific page
+            function showPage(pageId) {
+                // Hide all pages
+                pageContainers.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show the selected page
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update active indicators
+                pageIndicators.forEach(indicator => {
+                    if (indicator.dataset.page === pageId) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+            
+            // Add click event to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.dataset.page;
+                    showPage(pageId);
+                });
+            });
+            
+            // Add click event to page indicators
+            pageIndicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const pageId = this.dataset.page;
+                    showPage(pageId);
+                });
+            });
+            
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.backdropFilter = 'blur(10px)';
+                } else {
+                    header.style.background = '#fff';
+                    header.style.backdropFilter = 'none';
                 }
             });
-        });
-        
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = '#fff';
-                header.style.backdropFilter = 'none';
-            }
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
