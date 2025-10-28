@@ -502,6 +502,7 @@
             height: 250px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            position: relative;
         }
         
         .gallery-item:hover {
@@ -512,6 +513,18 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: 500;
         }
 
         /* ========== PRICING SECTION ========== */
@@ -861,6 +874,17 @@
             display: inline-block;
             margin-left: 10px;
         }
+        
+        .placeholder-img {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -934,7 +958,12 @@
                     <a href="#contact" class="btn btn-outline">Visit Our Academy</a>
                 </div>
                 <div class="about-image">
-                    <img src="Studentsaction.jpg" alt="Our Students in Action" class="about-img">
+                    <div class="placeholder-img">
+                        <div style="text-align: center;">
+                            <i class="fas fa-users" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Our Students in Action</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -947,8 +976,8 @@
             <div class="faculty-content">
                 <div class="faculty-info">
                     <h3>Robin Pandey</h3>
-                    <p><strong>Founder & Director</strong></p>
-                    <p>Live Performer | 10+ years teaching | Trained at Northern Illinois University</p>
+                    <p><strong>Founder & Lead Instructor</strong></p>
+                    <p>Live Performer | 15+ years teaching | Trained at Northern Illinois University</p>
                     <p>"My goal is to nurture not just skilled musicians, but joyful performers who love sharing their art."</p>
                     
                     <div class="faculty-highlights">
@@ -982,7 +1011,12 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="Mrpandey.jpg" alt="Robin Pandey" class="about-img">
+                    <div class="placeholder-img">
+                        <div style="text-align: center;">
+                            <i class="fas fa-user-tie" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Robin Pandey</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -995,7 +1029,7 @@
             <div class="programs-grid">
                 <div class="program-card">
                     <div class="program-icon">
-                        <i class="fas fa-piano"></i>
+                        <i class="fas fa-piano-keyboard"></i>
                     </div>
                     <h3>Piano Lessons</h3>
                     <p>Comprehensive piano instruction for all ages and skill levels, from beginner to advanced.</p>
@@ -1028,16 +1062,28 @@
             <p class="text-center">Take a look at our students in action during lessons, rehearsals, and performances.</p>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Student Performance" class="gallery-img">
+                    <div class="placeholder-img">
+                        <i class="fas fa-music" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="gallery-caption">Student Performance</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Music Lesson" class="gallery-img">
+                    <div class="placeholder-img">
+                        <i class="fas fa-chalkboard-teacher" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="gallery-caption">Music Lesson</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Talent Show" class="gallery-img">
+                    <div class="placeholder-img">
+                        <i class="fas fa-trophy" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="gallery-caption">Talent Show</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Student Recital" class="gallery-img">
+                    <div class="placeholder-img">
+                        <i class="fas fa-user-graduate" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="gallery-caption">Student Recital</div>
                 </div>
             </div>
             <div class="button-group mt-3">
@@ -1062,7 +1108,7 @@
                         <li><i class="fas fa-check"></i> Practice materials</li>
                         <li><i class="fas fa-check"></i> Progress assessment</li>
                     </ul>
-                    <a href="#enrollment" class="btn btn-outline">Get Started</a>
+                    <a href="https://form.jotform.com/230734922066152" class="btn btn-outline" target="_blank">Get Started</a>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Standard Package</h3>
@@ -1074,7 +1120,7 @@
                         <li><i class="fas fa-check"></i> Recital participation</li>
                         <li><i class="fas fa-check"></i> Practice materials</li>
                     </ul>
-                    <a href="#enrollment" class="btn btn-primary">Most Popular</a>
+                    <a href="https://form.jotform.com/230734922066152" class="btn btn-primary" target="_blank">Most Popular</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Advanced Package</h3>
@@ -1086,7 +1132,7 @@
                         <li><i class="fas fa-check"></i> Competition preparation</li>
                         <li><i class="fas fa-check"></i> Masterclass opportunities</li>
                     </ul>
-                    <a href="#enrollment" class="btn btn-outline">Get Started</a>
+                    <a href="https://form.jotform.com/230734922066152" class="btn btn-outline" target="_blank">Get Started</a>
                 </div>
             </div>
         </div>
@@ -1138,7 +1184,12 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Talent Show Performance" class="about-img">
+                    <div class="placeholder-img">
+                        <div style="text-align: center;">
+                            <i class="fas fa-theater-masks" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Talent Show Performance</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1179,11 +1230,16 @@
                     
                     <div class="button-group">
                         <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                        <a href="#contact" class="btn btn-outline">Contact Us</a>
+                        <a href="https://form.jotform.com/230734922066152" class="btn btn-outline" target="_blank">Register Now</a>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Student Enrollment" class="about-img">
+                    <div class="placeholder-img">
+                        <div style="text-align: center;">
+                            <i class="fas fa-user-graduate" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Student Enrollment</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1279,33 +1335,24 @@
                             <p>Monday - Friday: 9:00 AM - 8:00 PM<br>Saturday: 9:00 AM - 5:00 PM<br>Sunday: Closed</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Ready to Enroll?</h3>
+                            <p>Start your musical journey with us today!</p>
+                            <a href="https://form.jotform.com/230734922066152" class="btn btn-primary mt-2" target="_blank">Register Now</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="" disabled selected>Select Program Interest</option>
-                                <option value="piano">Piano Lessons</option>
-                                <option value="guitar">Guitar Lessons</option>
-                                <option value="voice">Voice Lessons</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <h3>Quick Contact</h3>
+                    <p>Have questions? Feel free to reach out to us directly using the contact information provided, or book a trial lesson to experience our teaching style firsthand.</p>
+                    <div class="button-group mt-3">
+                        <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
+                        <a href="mailto:Robinpandey@apollotunes.com" class="btn btn-outline">Email Us</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1413,19 +1460,7 @@
                     }
                 });
             });
-
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    // In a real implementation, you would send the form data to a server
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
         });
     </script>
 </body>
-
 </html>
