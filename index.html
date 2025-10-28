@@ -3,83 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo Performing Arts & Academy | Premier Music Education in Frisco, TX</title>
+    <title>Apollo Performing Arts & Academy | Premier Music School in Frisco, TX</title>
+    <meta name="description" content="Premier music education in Frisco, TX. Piano, guitar, voice & more for all ages. Performance-focused training with expert instructors at Apollo Performing Arts & Academy.">
+    <meta name="keywords" content="music lessons Frisco, piano academy Texas, kids music school, performing arts Frisco, Apollo Performing Arts">
+    <meta name="author" content="Apollo Performing Arts & Academy">
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Apollo Performing Arts & Academy | Frisco’s Premier Music School">
+    <meta property="og:description" content="Professional music instruction with performance opportunities for all ages in Frisco, TX.">
+    <meta property="og:url" content="https://www.apollotunes.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.apollotunes.com/Logo.png">
+
+    <!-- Favicon & App Icons (place these files in root) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- External CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
         /* ========== BASE STYLES ========== */
         :root {
             --primary: #2C3E50;
             --secondary: #8B7355;
             --accent: #C0B283;
-            --light: #f8f9fa;
+            --gold: #D4AF37;
+            --cream: #FDFCF9;
+            --light: #ffffff;
             --dark: #1a1a1a;
             --text: #444;
-            --cream: #F4F4F4;
-            --gold: #D4AF37;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
             color: var(--text);
-            background-color: #fff;
+            background-color: var(--light);
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
         section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
-        
         h1, h2, h3, h4 {
             color: var(--dark);
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             font-weight: 600;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
             line-height: 1.2;
         }
-        
+        h1 { font-size: 3.2rem; }
         h2 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             position: relative;
         }
-        
         h2:after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -18px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 70px;
             height: 3px;
-            background: var(--accent);
+            background: var(--gold);
         }
-        
-        h3 {
-            font-size: 1.8rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-        }
-        
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 32px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
@@ -87,783 +89,305 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            margin: 5px;
+            margin: 6px;
             text-align: center;
         }
-        
         .btn-primary {
             background: var(--accent);
             color: var(--dark);
         }
-        
         .btn-primary:hover {
             background: var(--gold);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
         }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: var(--dark);
-        }
-        
         .btn-outline {
             background: transparent;
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-        
         .btn-outline:hover {
             background: var(--primary);
             color: white;
         }
-        
-        .btn-chat {
-            background: #4CAF50;
-            color: white;
-        }
-        
-        .btn-chat:hover {
-            background: #3d8b40;
-            transform: translateY(-3px);
-        }
-        
-        .btn-register {
-            background: #2196F3;
-            color: white;
-        }
-        
-        .btn-register:hover {
-            background: #0b7dda;
-            transform: translateY(-3px);
-        }
-        
-        .btn-enrollment {
-            background: var(--secondary);
-            color: white;
-        }
-        
-        .btn-enrollment:hover {
-            background: #6d5c47;
-            transform: translateY(-3px);
-        }
-        
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        /* ========== NAVIGATION STYLES ========== */
+
+        /* ========== NAVIGATION ========== */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 2000;
+            backdrop-filter: blur(8px);
         }
-        
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 18px 0;
         }
-        
         .logo {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Georgia', serif;
             display: flex;
             align-items: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary);
         }
-        
         .logo-img {
-            height: 50px;
-            margin-right: 10px;
+            height: 48px;
+            margin-right: 12px;
         }
-        
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
-        .nav-links li {
-            margin-left: 2rem;
-        }
-        
+        .nav-links li { margin-left: 1.8rem; }
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 1.02rem;
+            transition: color 0.25s;
             position: relative;
         }
-        
         .nav-links a:after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -5px;
+            bottom: -6px;
             left: 0;
-            background: var(--accent);
+            background: var(--gold);
             transition: width 0.3s;
         }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        
-        .mobile-menu {
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover:after { width: 100%; }
+        .mobile-menu-btn {
             display: none;
-            font-size: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
             cursor: pointer;
         }
-        
+        .nav-links.mobile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            padding: 20px 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .nav-links.mobile li { margin: 12px 0; text-align: center; }
+        .nav-links.mobile a:after { display: none; }
+
         /* ========== PAGE CONTAINER ========== */
         .page-container {
             display: none;
-            padding-top: 80px;
+            padding-top: 120px;
         }
-        
         .page-container.active {
             display: block;
         }
-        
-        /* ========== HERO SECTION STYLES ========== */
+
+        /* ========== HERO ========== */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 150px 0 100px;
+            padding: 180px 0 120px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="80">♫</text></svg>');
-        }
-        
         .hero-content h1 {
             color: white;
             margin-bottom: 1.5rem;
+            font-size: 3.4rem;
+            line-height: 1.15;
         }
-        
         .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.25rem;
+            margin-bottom: 2.2rem;
+            opacity: 0.95;
+            max-width: 550px;
         }
-        
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
         }
-        
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .hero-img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        
-        .hero-img:hover {
-            transform: translateY(-5px);
-        }
-        
-        .img-pair {
-            display: flex;
-            gap: 1rem;
-            width: 100%;
-        }
-        
-        .img-pair .hero-img {
-            flex: 1;
-        }
-        
-        /* ========== PROGRAMS SECTION STYLES ========== */
-        .programs {
-            background: var(--cream);
-        }
-        
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .program-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--accent);
-        }
-        
-        .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .program-card i {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .program-card h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .program-card p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* ========== PRICING SECTION STYLES ========== */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .pricing-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #eee;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .pricing-card.featured {
-            border: 2px solid var(--accent);
-            transform: scale(1.05);
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--dark);
-            padding: 0.5rem 1.5rem;
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .pricing-card h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .price {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            color: #666;
-        }
-        
-        .pricing-card ul {
-            list-style: none;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-        
-        .pricing-card li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .pricing-card li:before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-        
-        /* ========== ABOUT SECTION STYLES ========== */
+
+        /* ========== ABOUT ========== */
         .about {
             background: var(--cream);
         }
-        
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-        
         .about-image {
-            height: 400px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 5rem;
+            height: 420px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
         }
-        
         .about-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
-        /* ========== GALLERY SECTION STYLES ========== */
-        .gallery {
-            padding: 80px 0;
-            background: white;
-        }
 
-        .gallery-grid {
+        /* ========== FACULTY ========== */
+        .faculty-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
         }
-
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 300px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .gallery-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* ========== ENROLLMENT SECTION STYLES ========== */
-        .enrollment {
-            background: var(--cream);
-            padding: 80px 0;
-        }
-
-        /* Style the image container in enrollment section to be square */
-        .enrollment .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 100%;
-            height: 400px; /* Fixed height like gallery */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Add hover effect to the image container */
-        .enrollment .about-image:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        /* Style the image to fill the container */
-        .enrollment .about-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Changed back to cover to fill the container */
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        /* Optional: Add a slight scale effect on image hover */
-        .enrollment .about-image:hover .about-img {
-            transform: scale(1.05);
-        }
-        
-        /* ========== TALENT SHOW SECTION STYLES ========== */
-        .talent-show {
+        .faculty-card {
             text-align: center;
-            background: var(--cream);
-        }
-        
-        .talent-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .talent-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .highlight-card {
-            background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
         }
-        
-        .highlight-card:hover {
-            transform: translateY(-5px);
+        .faculty-card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--accent);
         }
-        
-        .highlight-card i {
-            font-size: 2.5rem;
+        .faculty-card p.quote {
+            font-style: italic;
             color: var(--secondary);
-            margin-bottom: 1rem;
+            margin-top: 1rem;
+            font-size: 1.05rem;
         }
-        
-        /* ========== CONTACT SECTION STYLES ========== */
-        .contact {
+
+        /* ========== VIDEO ========== */
+        .video-section {
+            background: var(--cream);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .video-wrapper {
+            max-width: 850px;
+            margin: 0 auto 2.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+        }
+        .video-wrapper iframe {
+            width: 100%;
+            height: 480px;
+            display: block;
+        }
+
+        /* ========== LINKS SECTION ========== */
+        .links-section {
+            padding: 80px 0;
+            text-align: center;
             background: white;
         }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h2 {
-            text-align: left;
-        }
-
-        .contact-info h2:after {
-            left: 0;
-            transform: none;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin-top: 0.25rem;
-        }
-
-        .contact-item h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-buttons {
-            margin-top: 2rem;
-        }
-
-        /* Add this line to fix bold text */
-        .contact-item p {
-            font-weight: normal;
-        }
-        
-        /* ========== FOOTER STYLES ========== */
-        footer {
-            background: #000000;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3,
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--accent);
-        }
-
-        .footer-section p {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #444;
-            color: white;
-        }
-        
-        /* ========== PAGE INDICATORS ========== */
-        .page-indicators {
+        .links-grid {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
-            gap: 10px;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
         }
-        
-        .page-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            cursor: pointer;
-            transition: all 0.3s;
+        .link-card {
+            background: var(--cream);
+            padding: 1.8rem 2.5rem;
+            border-radius: 12px;
+            min-width: 280px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
         }
-        
-        .page-indicator.active {
-            background: var(--accent);
-            transform: scale(1.2);
+        .link-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
         }
-        
-        /* ========== RESPONSIVE STYLES ========== */
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        footer .logo { color: white; justify-content: center; font-size: 1.8rem; }
+        footer p { opacity: 0.85; margin-top: 12px; }
+        footer .divider { padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+
+        /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            
-            .nav-links li {
-                margin-left: 0;
-            }
-            
+            .mobile-menu-btn { display: block; }
+            .nav-links:not(.mobile) { display: none; }
+            .nav-links.mobile.active { display: flex; }
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
-                padding: 120px 0 80px;
+                padding: 150px 0 90px;
             }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .about-content,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .pricing-card.featured {
-                transform: none;
-            }
-            
-            .button-group {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .button-group .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .img-pair {
-                flex-direction: column;
-            }
-            
-            .page-indicators {
-                display: none;
-            }
-        }
-        
-        /* ========== BUTTON CLICK FIX ========== */
-        .hero-buttons a {
-            pointer-events: auto !important;
-            cursor: pointer !important;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .hero-buttons {
-            pointer-events: auto !important;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 100;
-        }
-
-        /* FIX: Make sure the hero background doesn't block clicks */
-        .hero:before {
-            pointer-events: none !important;
-        }
-
-        /* FIX: Ensure buttons are properly positioned */
-        .btn {
-            position: relative;
-            z-index: 1000;
+            .hero-content h1 { font-size: 2.6rem; }
+            .hero-content p { margin: 0 auto 2.2rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .about-image { height: 350px; }
+            .video-wrapper iframe { height: 320px; }
+            section { padding: 70px 0; }
+            h2 { font-size: 2.1rem; }
         }
     </style>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- ========== HEADER & NAVIGATION ========== -->
+    <!-- ========== HEADER ========== -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
                     <img src="Logo.png" alt="Apollo Performing Arts" class="logo-img">
-                    <span>Apollo Performing Arts</span>
+                    <span>Apollo</span>
                 </div>
-                <ul class="nav-links">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#" class="nav-link" data-page="home">Home</a></li>
-                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-                    <li><a href="#" class="nav-link" data-page="programs">Programs</a></li>
-                    <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="#" class="nav-link" data-page="pricing">Pricing</a></li>
-                    <li><a href="#" class="nav-link" data-page="talent">Talent Show</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="faculty">Faculty</a></li>
+                    <li><a href="#" class="nav-link" data-page="video">Video</a></li>
                     <li><a href="#" class="nav-link" data-page="enrollment">Enrollment</a></li>
                     <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
         </div>
     </header>
 
-    <!-- ========== HOME PAGE ========== -->
+    <!-- ========== HOME ========== -->
     <div id="home" class="page-container active">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Unleash Your Musical Potential</h1>
-                    <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
+                    <h1>Where Music Meets Mastery</h1>
+                    <p>Premier music education in Frisco, TX—nurturing confident performers through expert instruction, stage experience, and artistic growth.</p>
                     <div class="hero-buttons">
                         <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                        <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
-                        <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="img-pair">
-                        <!-- Replace with your actual hero images -->
-                        <div class="hero-img" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
-                            <div style="text-align: center; padding: 2rem;">
-                                <i class="fas fa-music" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <p>Professional Music Instruction</p>
-                            </div>
-                        </div>
-                        <div class="hero-img" style="background: linear-gradient(45deg, var(--secondary), var(--accent)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
-                            <div style="text-align: center; padding: 2rem;">
-                                <i class="fas fa-trophy" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <p>Performance Opportunities</p>
-                            </div>
-                        </div>
+                        <a href="https://g.co/kgs/apollofrisco" class="btn btn-outline" target="_blank">Read Google Reviews</a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator active" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
     </div>
 
-    <!-- ========== ABOUT PAGE ========== -->
+    <!-- ========== ABOUT ========== -->
     <div id="about" class="page-container">
         <section class="about">
             <div class="container">
@@ -871,278 +395,76 @@
                 <div class="about-content">
                     <div>
                         <h3>Our Mission</h3>
-                        <p>At Apollo Performing Arts & Academy, we're dedicated to teaching students to perform confidently, whether for personal enjoyment, family, friends, or public audiences.</p>
-                        <p>Our program typically spans 3-5 years, depending on the student's age and experience. We offer both Regular Lessons and Advanced Lessons, with opportunities to join our Performing Teams when students are ready.</p>
-                        <p>Located in Frisco, TX, our academy provides a comprehensive learning environment with supportive instructors who guide students through their musical journey.</p>
+                        <p>At Apollo Performing Arts & Academy, we’re dedicated to teaching students to perform confidently—whether for personal joy, family, or public audiences.</p>
+                        <p>Our structured 3–5 year program offers Regular and Advanced Lessons, with pathways into our Performing Teams for committed students.</p>
+                        <p>Located in Frisco, TX, we provide a nurturing environment where musical excellence and self-expression thrive.</p>
                         <a href="#" class="btn btn-outline nav-link" data-page="contact">Visit Our Academy</a>
                     </div>
                     <div class="about-image">
-                        <img src="Studentsaction.jpg" alt="Our Students in Action" class="about-img">
+                        <img src="Studentsaction.jpg" alt="Students in Action" class="about-img">
                     </div>
                 </div>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator active" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
     </div>
 
-    <!-- ========== PROGRAMS PAGE ========== -->
-    <div id="programs" class="page-container">
-        <section class="programs">
+    <!-- ========== FACULTY ========== -->
+    <div id="faculty" class="page-container">
+        <section class="faculty">
             <div class="container">
-                <h2>Our Music Programs</h2>
-                <div class="programs-grid">
-                    <div class="program-card">
-                        <i class="fas fa-piano"></i>
-                        <h3>Regular Lessons</h3>
-                        <p>Perfect for students beginning their musical journey or continuing their education.</p>
-                        <ul>
-                            <li>4 half-hour lessons per month</li>
-                            <li>Private or group lessons available</li>
-                            <li>Performance opportunities</li>
-                            <li>All ages and skill levels</li>
-                        </ul>
-                    </div>
-                    <div class="program-card">
-                        <i class="fas fa-star"></i>
-                        <h3>Advanced Lessons</h3>
-                        <p>For dedicated students ready to take their skills to the next level.</p>
-                        <ul>
-                            <li>3 hours per week (12 hours monthly)</li>
-                            <li>Includes Performing Team participation</li>
-                            <li>Enhanced curriculum</li>
-                            <li>Additional performance opportunities</li>
-                        </ul>
-                    </div>
-                    <div class="program-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Performing Teams</h3>
-                        <p>Join our Apollo Rockstar Kids for exceptional performance experiences.</p>
-                        <ul>
-                            <li>Minimum 2 hours of weekly classes</li>
-                            <li>Performance commitment required</li>
-                            <li>Team uniforms and gear</li>
-                            <li>Audition-based entry</li>
-                        </ul>
+                <h2>Meet Our Faculty</h2>
+                <div class="faculty-grid">
+                    <div class="faculty-card">
+                        <img src="Mrpandey.jpg" alt="Robin Pandey - Founder">
+                        <h3>Robin Pandey</h3>
+                        <p><strong>Founder & Lead Instructor</strong></p>
+                        <p>B.Mus in Piano Performance | 15+ years teaching | Trained at Berklee College of Music</p>
+                        <p class="quote">“My goal is to nurture not just skilled musicians, but joyful performers who love sharing their art.”</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator active" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
     </div>
 
-    <!-- ========== GALLERY PAGE ========== -->
-    <div id="gallery" class="page-container">
-        <section class="gallery">
+    <!-- ========== VIDEO ========== -->
+    <div id="video" class="page-container">
+        <section class="video-section">
             <div class="container">
-                <h2>Our Gallery</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Abhinav.jpg" alt="Abhinav">
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Mrpandey.jpg" alt="Mr. Pandey">
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Monil.jpg" alt="Monil">
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Zoya.jpg" alt="Zoya">
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Studentsaction.jpg" alt="Students in Action">
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img">
-                            <img src="Musicfamily.png" alt="Music Family">
-                        </div>
-                    </div>
+                <h2>Experience Apollo</h2>
+                <p>See our students learn, grow, and shine on stage.</p>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/lhT6I6D_3Rk?si=CyllL8xV3uN-5I73" 
+                        title="Apollo Highlight Reel"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-            </div>
-        </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator active" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
-    </div>
-
-    <!-- ========== PRICING PAGE ========== -->
-    <div id="pricing" class="page-container">
-        <section class="pricing">
-            <div class="container">
-                <h2>Tuition & Packages</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Regular Lessons</h3>
-                        <div class="price">$300<span>/month</span></div>
-                        <ul>
-                            <li>30 minutes per week</li>
-                            <li>4 lessons monthly</li>
-                            <li>Personalized curriculum</li>
-                            <li>Performance opportunities</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline nav-link" data-page="enrollment">Enroll Now</a>
-                    </div>
-                    <div class="pricing-card featured">
-                        <div class="popular-badge">Most Popular</div>
-                        <h3>Extended Lessons</h3>
-                        <div class="price">$350-450<span>/month</span></div>
-                        <ul>
-                            <li>45 min - 1 hour per week</li>
-                            <li>4 lessons monthly</li>
-                            <li>Enhanced instruction</li>
-                            <li>All regular benefits</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary nav-link" data-page="enrollment">Enroll Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Advanced Program</h3>
-                        <div class="price">$700<span>/month</span></div>
-                        <ul>
-                            <li>3 hours per week</li>
-                            <li>Performing Team included</li>
-                            <li>Comprehensive training</li>
-                            <li>Multiple performance events</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline nav-link" data-page="enrollment">Enroll Now</a>
-                    </div>
-                </div>
-                <p style="text-align: center; margin-top: 2rem;"><strong>Registration Fee:</strong> $75 | <strong>Trial Lesson:</strong> $35 (15-30 minutes)</p>
-            </div>
-        </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator active" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
-    </div>
-
-    <!-- ========== TALENT SHOW PAGE ========== -->
-    <div id="talent" class="page-container">
-        <section class="talent-show">
-            <div class="container">
-                <h2>Apollo Talent Shows</h2>
-                <div class="talent-content">
-                    <p>We believe performance is an essential part of musical education. All Apollo students are encouraged to participate in our biannual talent shows and award ceremonies.</p>
-                    <p>These events provide valuable stage experience and help build confidence in our students. Performing Team members have additional opportunities to showcase their skills throughout the year.</p>
-                    
-                    <div class="talent-highlights">
-                        <div class="highlight-card">
-                            <i class="fas fa-trophy"></i>
-                            <h3>Twice Yearly</h3>
-                            <p>We host talent shows twice each year with award ceremonies to celebrate student achievements.</p>
-                        </div>
-                        <div class="highlight-card">
-                            <i class="fas fa-users"></i>
-                            <h3>All Students Welcome</h3>
-                            <p>Both regular and advanced students are encouraged to participate and showcase their progress.</p>
-                        </div>
-                        <div class="highlight-card">
-                            <i class="fas fa-tshirt"></i>
-                            <h3>Apollo Attire</h3>
-                            <p>Students perform in official Apollo T-shirts and necessary accessories for a unified look.</p>
-                        </div>
-                    </div>
-                    
-                    <p style="margin-top: 2rem;"><strong>Event Fee:</strong> $75 per talent show (non-refundable)</p>
-                </div>
-            </div> 
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.facebook.com/ApolloPerformingArtsandAcademy/photos" 
-                   class="btn btn-primary" 
-                   target="_blank" 
-                   style="background: #1877F2; border-color: #1877F2;">
-                    <i class="fab fa-facebook" style="margin-right: 8px;"></i>
-                    View Talent Show Pictures
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.instagram.com/apollo.performingarts/" 
-                   class="btn btn-primary" 
-                   target="_blank"
-                   style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); border: none;">
-                    <i class="fab fa-instagram" style="margin-right: 8px;"></i>
-                    Follow on Instagram
+                <a href="https://youtu.be/b53tTzjDPcw?si=-FfM4_oEUtoc-L-V" class="btn btn-primary" target="_blank">
+                    Watch Student Performances
                 </a>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator active" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
     </div>
 
-    <!-- ========== ENROLLMENT PAGE ========== -->
+    <!-- ========== ENROLLMENT ========== -->
     <div id="enrollment" class="page-container">
-        <section class="enrollment">
+        <section class="about" style="background: var(--cream);">
             <div class="container">
-                <h2>Begin Your Musical Journey</h2>
+                <h2>Begin Your Journey</h2>
                 <div class="about-content">
                     <div>
-                        <h3>Enrollment Process</h3>
-                        <p>Getting started at Apollo Performing Arts is simple:</p>
-                        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-                            <li><strong>Trial Lesson:</strong> Schedule a 15-30 minute introductory session ($35)</li>
-                            <li><strong>Assessment:</strong> We'll evaluate the student's level and goals</li>
-                            <li><strong>Program Selection:</strong> Choose the right program for your needs</li>
-                            <li><strong>Registration:</strong> Complete enrollment with $75 registration fee</li>
-                            <li><strong>Payment:</strong> Submit first and last month's tuition 48 hours before first lesson</li>
+                        <h3>Enrollment Steps</h3>
+                        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                            <li><strong>Trial Lesson:</strong> $35 (15–30 min)</li>
+                            <li><strong>Assessment & Program Match</strong></li>
+                            <li><strong>Register:</strong> $75 fee + tuition</li>
                         </ol>
-                        <p>For questions about enrollment, contact us at <strong>Robinpandey@apollotunes.com</strong> or call <strong>833-918-0668</p>
-                        
-                        <div class="button-group">
-                            <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
-                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                            <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
+                        <p>Contact: <strong>Robinpandey@apollotunes.com</strong> | <strong>833-918-0668</strong></p>
+                        <div class="hero-buttons">
+                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book Trial</a>
+                            <a href="https://form.jotform.com/230734922066152" class="btn btn-outline" target="_blank">Enroll Now</a>
                         </div>
                     </div>
                     <div class="about-image">
@@ -1151,177 +473,94 @@
                 </div>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator active" data-page="enrollment"></div>
-            <div class="page-indicator" data-page="contact"></div>
-        </div>
     </div>
 
-    <!-- ========== CONTACT PAGE ========== -->
+    <!-- ========== CONTACT ========== -->
     <div id="contact" class="page-container">
         <section class="contact">
             <div class="container">
                 <h2>Contact Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Visit Our Academy</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>7511 Main Street, Suite 200<br>Frisco, TX 75034<br>(Visit by appt. only)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>833-813-0668 (Main)<br>469-616-1950 (Direct (Not always available) - No calls after 9 PM)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>Robinpandey@apollotunes.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Office Hours</h4>
-                                <p>Monday-Friday: 9AM-8PM <br>Saturday: 9AM-5PM<br>Sunday: Closed<br>Office visits with appointment only </p>
-                            </div>
-                        </div>
+                <div class="about-content">
+                    <div>
+                        <p><strong>Location:</strong> 7511 Main Street, Suite 200, Frisco, TX 75034 (By appointment)</p>
+                        <p><strong>Phone:</strong> 833-813-0668</p>
+                        <p><strong>Email:</strong> Robinpandey@apollotunes.com</p>
+                        <p><strong>Hours:</strong> Mon–Fri 9AM–8PM, Sat 9AM–5PM</p>
                     </div>
-                    <div class="contact-info">
-                        <h3>Quick Actions</h3>
-                        <div class="button-group" style="flex-direction: column;">
-                            <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                            <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-chat" target="_blank">Let's Chat</a>
-                            <a href="https://pci.jotform.com/form/223423546401144" class="btn btn-register" target="_blank">Register for Intro Class</a>
-                            <a href="https://form.jotform.com/230734922066152" class="btn btn-enrollment" target="_blank">Enrollment Form</a>
-                        </div>
+                    <div class="about-image">
+                        <img src="Abhinav.jpg" alt="Apollo Student" class="about-img">
                     </div>
                 </div>
             </div>
         </section>
-        
-        <div class="page-indicators">
-            <div class="page-indicator" data-page="home"></div>
-            <div class="page-indicator" data-page="about"></div>
-            <div class="page-indicator" data-page="programs"></div>
-            <div class="page-indicator" data-page="gallery"></div>
-            <div class="page-indicator" data-page="pricing"></div>
-            <div class="page-indicator" data-page="talent"></div>
-            <div class="page-indicator" data-page="enrollment"></div>
-            <div class="page-indicator active" data-page="contact"></div>
-        </div>
     </div>
+
+    <!-- ========== BLOG & REVIEWS ========== -->
+    <section class="links-section">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>Google Reviews</h3>
+                    <p>Hear from our families</p>
+                    <a href="https://g.co/kgs/apollofrisco" class="btn btn-outline" target="_blank">Read Reviews</a>
+                </div>
+                <div class="link-card">
+                    <h3>Our Blog</h3>
+                    <p>Music tips & insights</p>
+                    <a href="https://apollo-performing-arts.hashnode.dev" class="btn btn-outline" target="_blank">Visit Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ========== FOOTER ========== -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Apollo Performing Arts & Academy</h3>
-                    <p>Professional music education in Frisco, TX. Teaching students to perform confidently since 2017.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+            <div>
+                <div class="logo">
+                    <img src="Logo.png" alt="Apollo" class="logo-img" style="height: 40px; margin-right: 10px;">
+                    <span>Apollo Performing Arts</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
-                        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-                        <li><a href="#" class="nav-link" data-page="programs">Programs</a></li>
-                        <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#" class="nav-link" data-page="talent">Talent Shows</a></li>
-                        <li><a href="#" class="nav-link" data-page="enrollment">Enrollment</a></li>
-                        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-                        <li><a href="#">Student Portal</a></li>
-                    </ul>
-                </div>
+                <p>Frisco’s premier music academy since 2017</p>
             </div>
-            <div class="footer-bottom">
+            <div class="divider">
                 <p>&copy; 2025 Apollo Performing Arts & Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // ========== JAVASCRIPT CODE ========== 
         document.addEventListener('DOMContentLoaded', function() {
-            // Navigation handling
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageContainers = document.querySelectorAll('.page-container');
-            const pageIndicators = document.querySelectorAll('.page-indicator');
-            
-            // Function to show a specific page
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Page navigation
+            const pages = document.querySelectorAll('.page-container');
             function showPage(pageId) {
-                // Hide all pages
-                pageContainers.forEach(page => {
-                    page.classList.remove('active');
-                });
-                
-                // Show the selected page
+                pages.forEach(p => p.classList.remove('active'));
                 document.getElementById(pageId).classList.add('active');
-                
-                // Update active indicators
-                pageIndicators.forEach(indicator => {
-                    if (indicator.dataset.page === pageId) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
-                
-                // Scroll to top
+                navLinks.classList.remove('active');
                 window.scrollTo(0, 0);
             }
-            
-            // Add click event to navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', e => {
                     e.preventDefault();
-                    const pageId = this.dataset.page;
-                    showPage(pageId);
+                    showPage(link.dataset.page);
                 });
             });
-            
-            // Add click event to page indicators
-            pageIndicators.forEach(indicator => {
-                indicator.addEventListener('click', function() {
-                    const pageId = this.dataset.page;
-                    showPage(pageId);
-                });
-            });
-            
-            // Navbar background change on scroll
-            window.addEventListener('scroll', function() {
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
                 const header = document.querySelector('header');
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                    header.style.backdropFilter = 'blur(10px)';
-                } else {
-                    header.style.background = '#fff';
-                    header.style.backdropFilter = 'none';
-                }
+                header.style.boxShadow = window.scrollY > 80 
+                    ? '0 4px 20px rgba(0,0,0,0.1)' 
+                    : '0 2px 12px rgba(0,0,0,0.08)';
             });
         });
     </script>
