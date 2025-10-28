@@ -287,7 +287,7 @@
             display: flex; 
             flex-wrap: wrap; 
             gap: 1rem; 
-            margin-bottom: 2rem; /* Added margin to create space below buttons */
+            margin-bottom: 3rem; /* Added margin to create space below buttons */
         }
         
         .hero-image {
@@ -369,7 +369,7 @@
             .hero-buttons { 
                 flex-direction: column; 
                 align-items: center; 
-                margin-bottom: 1.5rem; /* Adjusted for mobile */
+                margin-bottom: 2.5rem; /* Adjusted for mobile */
             }
             
             /* MOBILE LAYOUT FIXES - Single column layout */
@@ -412,11 +412,13 @@
             .img-pair {
                 grid-template-columns: 1fr;
                 gap: 15px;
+                max-width: 300px;
             }
             
             .hero-img {
                 height: 150px;
                 margin-top: -0.25in; /* Move up 1/4 inch on mobile too */
+                aspect-ratio: 1/1;
             }
             
             /* Image ordering for mobile - images appear after text */
@@ -1526,4 +1528,5 @@
         });
     </script>
 </body>
+
 </html>
