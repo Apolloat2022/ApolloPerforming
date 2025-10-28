@@ -284,16 +284,13 @@
                 align-items: center; 
             }
             
+            /* MOBILE LAYOUT FIXES - Single column layout */
             .about-content, .faculty-content, .talent-content, .enrollment-content, .contact-grid { 
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr !important; 
                 gap: 2rem;
             }
             
-            .faculty-info {
-                padding-right: 0;
-            }
-            
-            .talent-info {
+            .faculty-info, .talent-info {
                 padding-right: 0;
             }
             
@@ -333,13 +330,17 @@
                 height: 150px;
             }
             
-            .about-image {
+            /* Image ordering for mobile - images appear after text */
+            .about-image, .faculty .about-image, .talent-show .about-image, .enrollment .about-image {
                 height: 300px;
-                order: -1;
+                order: 2; /* Images appear after text on mobile */
             }
             
-            .faculty .about-image {
-                order: -1;
+            .about-content > div:first-child,
+            .faculty-content > div:first-child,
+            .talent-content > div:first-child,
+            .enrollment-content > div:first-child {
+                order: 1; /* Text appears first on mobile */
             }
         }
 
