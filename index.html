@@ -235,7 +235,7 @@
         }
 
         /* ========== MOBILE NAVIGATION ========== */
-      @media (max-width: 968px) {
+     @media (max-width: 968px) {
     .nav-links {
         display: none;
         position: fixed;
@@ -272,30 +272,42 @@
     .hero { 
         grid-template-columns: 1fr; 
         text-align: center; 
-        padding: 150px 0 80px; 
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important; /* FIX: Keep background color */
+        padding: 150px 0 60px; /* Reduced bottom padding to move buttons up */
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
     }
     
     .hero-content h1 { 
         font-size: 2.5rem; 
-        color: white !important; /* FIX: Ensure text is visible */
+        color: white !important;
     }
     
     .hero-content p {
-        color: rgba(255, 255, 255, 0.9) !important; /* FIX: Ensure paragraph is visible */
+        color: rgba(255, 255, 255, 0.9) !important;
+        margin-bottom: 1.5rem; /* Reduced margin to move buttons up */
     }
     
-    /* FIXED BUTTON SPACING - Move all buttons up 1/4 inch */
+    /* FIXED BUTTON STYLING AND SPACING */
     .hero-buttons { 
         flex-direction: column; 
         align-items: center;
-        gap: 0.8rem; /* Slightly reduced gap */
-        margin-top: 1rem !important; /* Reduced from 2.5rem to move buttons up */
-        margin-bottom: 0.5rem;
+        gap: 0.8rem;
+        margin-top: 0.5rem !important; /* Significantly reduced to move buttons up */
+    }
+    
+    /* Fix Google Reviews button visibility */
+    .hero-buttons .btn-outline {
+        background: transparent;
+        color: white !important; /* White text */
+        border: 2px solid white !important; /* White border */
+    }
+    
+    .hero-buttons .btn-outline:hover {
+        background: white !important;
+        color: var(--primary) !important; /* Dark text on hover */
     }
     
     .hero-buttons .btn {
-        margin: 2px 0; /* Further reduced margin */
+        margin: 0; /* Remove default margins */
     }
     
     /* MOBILE LAYOUT FIXES - Single column layout */
@@ -338,6 +350,7 @@
     .img-pair {
         grid-template-columns: 1fr;
         gap: 15px;
+        margin-top: 1.5rem; /* Add space between buttons and images */
     }
     
     .hero-img {
@@ -347,14 +360,14 @@
     /* Image ordering for mobile - images appear after text */
     .about-image, .faculty .about-image, .talent-show .about-image, .enrollment .about-image {
         height: 300px;
-        order: 2; /* Images appear after text on mobile */
+        order: 2;
     }
     
     .about-content > div:first-child,
     .faculty-content > div:first-child,
     .talent-content > div:first-child,
     .enrollment-content > div:first-child {
-        order: 1; /* Text appears first on mobile */
+        order: 1;
     }
 }
             /* MOBILE LAYOUT FIXES - Single column layout */
@@ -1032,7 +1045,7 @@
                 <p>Premier music education for all ages and skill levels at Apollo Performing Arts & Academy in Frisco, TX. Join our community of passionate musicians and performers.</p>
                 <div class="hero-buttons">
                     <a href="https://calendly.com/robinpandey-apollotunes/30min" class="btn btn-primary" target="_blank">Book a Trial Lesson</a>
-                    <a href="https://www.google.com/search?q=google+review+url&sca_esv=3c78addd28f7a980&sxsrf=AE3TifP82bAnJe6JxxuAIOaXHnzKCO40Cg%3A1761614488222&source=hp&ei=mBoAacjXC8y0qtsPsYak-Qo&iflsig=AOw8s4IAAAAAaQAoqB8fRGJrIUD1OhKOm1oLyjzs6ANU&oq=Google+&gs_lp=Egdnd3Mtd2l6IgdHb29nbGUgKgIIADIKECMYgAQYJxiKBTIKECMYgAQYJxiKBTIKECMYgAQYJxiKBTIKEAAYgAQYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIKEAAYgAQYQxiKBTILEAAYgAQYsQMYgwEyEBAAGIAEGLEDGEMYgwEYigUyCxAAGIAEGLEDGIMBMgoQABiABBhDGIoFSK8XUABY0wRwAHgAkAEAmAFEoAGgA6oBATe4AQHIAQD4AQGYAgegAuADwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICERAuGIAEGLEDGNEDGIMBGMcBmAMAkgcBN6AHuEiyBwE3uAfgA8IHBTItNi4xyAcw&sclient=gws-wiz" class="btn btn-outline" target="_blank">Read Google Reviews</a>
+                    <a href="https://www.google.com/search?sca_esv=3c78addd28f7a980&sxsrf=AE3TifOv1HJBDDZTp6S5OAEuzkZ1QhwV8Q:1761665721913&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E91gtMg_eDRg6UZxJQg1Pbqmr3SbfZe0rOgQODQvIwkfSuFuaGX-uOxSoOgPRBlGiTe7nvpC5r1pLYIVOlpysBSRekBNU_2tKXgvl4r1mnd-rMVyxS_fd1Xkog8W0yAaoJnCrJo%3D&q=Apollo+Performing+Arts+%26+Academy+Reviews&sa=X&ved=2ahUKEwjUgcWcnMeQAxWekmoFHQKZBFYQ0bkNegQINBAE&biw=1360&bih=607&dpr=1" class="btn btn-outline" target="_blank">Read Google Reviews</a>
                     <a href="https://app.vectorshift.ai/chatbots/deployed/68d1d8ace9de515550b744a0" class="btn btn-primary" target="_blank">Let's Chat</a>
                 </div>
             </div>
@@ -1585,4 +1598,5 @@
 </body>
 
 </html>
+
 
