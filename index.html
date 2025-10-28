@@ -279,10 +279,17 @@
                 font-size: 2.5rem; 
             }
             
-            .hero-buttons { 
-                flex-direction: column; 
-                align-items: center; 
-            }
+    .hero-buttons { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 0.5rem !important; /* Reduced gap between buttons */
+        margin-top: 1.5rem; /* Adjust if needed */
+    }
+    
+    .hero-buttons .btn {
+        margin: 3px 0; /* Reduced margin between buttons */
+    }
+}
             
             /* MOBILE LAYOUT FIXES - Single column layout */
             .about-content, .faculty-content, .talent-content, .enrollment-content, .contact-grid { 
@@ -1510,4 +1517,5 @@
         });
     </script>
 </body>
+
 </html>
